@@ -37,8 +37,7 @@ import { SearchPipe } from './pipes/search.pipe';
       { path: "customers", component: CustomerListComponent },
       { path: "customers/add", component: CustomerComponent },
       { path: "customers/edit/:id", component: CustomerComponent },
-      { path: "test", component: TestComponent },
-      /*{ path: '**', component: PageNotFoundComponent }*/
+      { path: '**', component: HomeComponent }
     ])
   ],
   providers: [CustomerService],
