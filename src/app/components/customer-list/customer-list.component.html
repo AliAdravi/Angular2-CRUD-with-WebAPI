@@ -1,0 +1,42 @@
+<h1>Customer List
+  <button class="btn btn-success btn-circle pull-right" 
+          (click) = 'add()'
+          title="Add Customer">
+    <i class="glyphicon glyphicon-plus"></i>
+  </button>
+</h1>
+
+<div class="alert-danger">{{errorMessage}}</div>
+
+<div class="input-group">
+    <input type="text" class="form-control" 
+            placeholder="Search"    
+            [(ngModel)]="searchText"
+            aria-describedby="basic-addon1">
+    <span class="input-group-addon" id="basic-addon1">Search</span>
+</div> 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cust of customers | search: searchText"
+            [ngClass]="{'btn-primary': cust.id == currentId }">
+            <td>{{cust.id}}</td>
+            <td>{{cust.name}}</td>
+            <td>{{cust.address}}</td>
+            <td>{{cust.phone}}</td>
+            <td style="width: 70px;">
+                <i class="glyphicon glyphicon-edit pointer" (click)="edit(cust.id)" title="Edit"></i>
+                <i class="glyphicon glyphicon-trash pointer" (click)="delete(cust.id)"  title="Delete"></i>
+                <i class="glyphicon glyphicon-user pointer" title="Image"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

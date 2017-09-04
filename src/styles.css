@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+.pointer{
+    cursor: pointer;
+}
+input[type='text'].ng-invalid{
+    border-left: 4px solid #900;
+}
+
+input[type='text'].ng-valid{
+    border-left: 4px solid #090;
+}
+
+.error{
+    color: #b00;
+}
+
+.btn-circle{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 1.428571429;
+  border-radius: 50% !important;
+}
+
+.rightpanel{
+    padding:20px;
+    position: fixed; 
+    right:0; 
+    top: 0px;
+    background-color: #cde; 
+    border: 2px solid #bbb;
+    z-index: 2000;
+    overflow-y: auto;
+    max-height: 100%;
+}
+.mymodel {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+.row{
+    margin-bottom: 10px;
+}
